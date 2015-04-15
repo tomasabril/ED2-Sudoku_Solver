@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1429033064 source:/home/diego/Programacao/SudokuSolver/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1429041289 source:/home/diego/Programacao/SudokuSolver/main.cpp
+	<stdio.h>
+	<stdlib.h>
+
+1429059210 source:d:\github\ed2-sudoku_solver\main.cpp
+	<stdio.h>
+	<stdlib.h>
+
