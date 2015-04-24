@@ -25,8 +25,7 @@ void lerMatriz()
 {
     int i,j,n;
 
-    while(scanf("%d", &n) == 1)
-    {
+    while(scanf("%d", &n) == 1) {
         tamCasa = n;
         tamMatriz = n*n;
 
@@ -34,14 +33,12 @@ void lerMatriz()
 
         matriz = (int**)malloc(tamMatriz * sizeof(int*));
 
-        for(i = 0; i < tamMatriz; i++)
-        {
+        for(i = 0; i < tamMatriz; i++) {
             matriz[i] = (int*)malloc(tamMatriz * sizeof(int));
         }
 
         for(i=0; i<tamMatriz; i++)
-            for(j=0; j<tamMatriz; j++)
-            {
+            for(j=0; j<tamMatriz; j++) {
                 scanf("%d", &matriz[i][j]);
             }
 
@@ -58,8 +55,7 @@ void imprimeMatriz()
 {
     int i, j;
 
-    for(i = 0; i < tamMatriz; i++)
-    {
+    for(i = 0; i < tamMatriz; i++) {
         for(j = 0; j < tamMatriz; j++)
             printf("%d ", matriz[i][j]);
 
@@ -72,26 +68,21 @@ void resolve(int linha, int coluna)
 {
     int i;
 
-    if(coluna > tamMatriz-1)
-    {
+    if(coluna > tamMatriz-1) {
         coluna = 0;
         linha++;
     }
 
-    if(linha > tamMatriz-1)
-    {
+    if(linha > tamMatriz-1) {
         verificador=1;
         return;
     }
 
     if(matriz[linha][coluna] != 0)
         resolve(linha, coluna+1);
-    else
-    {
-        for(i = 1; i <= tamMatriz; i++)
-        {
-            if(verifica(linha, coluna, i) != 0)
-            {
+    else {
+        for(i = 1; i <= tamMatriz; i++) {
+            if(verifica(linha, coluna, i) != 0) {
                 matriz[linha][coluna] = i;
                 resolve(linha, coluna+1);
                 if(verificador)
